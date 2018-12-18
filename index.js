@@ -1,15 +1,11 @@
-import express from 'express';
 import dotenv from 'dotenv';
-import routes from './src/routes';
+import app from './src';
 
 const loadConfig = dotenv.config();
+
 if (loadConfig.error) {
   console.log('No config file found(.env)');
 }
-
-const app = express();
-
-app.use('/', routes);
 
 const port = process.env.PORT || 5000;
 
