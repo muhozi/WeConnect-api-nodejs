@@ -1,0 +1,30 @@
+{
+  "name": "weconnect",
+  "version": "1.0.0",
+  "description": "WeConnect provides a platform that brings businesses and individuals together",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/muhozi/WeConnect-api-nodejs.git"
+  },
+  "keywords": [
+    "WeConnect",
+    "api",
+    "nodejs"
+  ],
+  "author": "Emery Muhozi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhozi/WeConnect-api-nodejs/issues"
+  },
+  "homepage": "https://github.com/muhozi/WeConnect-api-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
