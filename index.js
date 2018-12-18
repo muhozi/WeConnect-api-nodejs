@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import routes from './api/routes';
+import routes from './src/routes';
 
 const loadConfig = dotenv.config();
 if (loadConfig.error) {

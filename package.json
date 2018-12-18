@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest test",
-    "start": "nodemon ./index.js --exec babel-node --presets babel-preset-env"
+    "start": "nodemon ./index.js --exec babel-node --presets babel-preset-env",
+    "format": "prettier --write \"src/**/*.js\" \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,12 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "jest": "^23.6.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3"
   }
 }
