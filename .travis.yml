@@ -8,4 +8,4 @@ script:
   - npm run test:ci
 
 after_success:
-  - coveralls < coverage/lcov.info
+  - coveralls < coverage/jest/lcov.info
