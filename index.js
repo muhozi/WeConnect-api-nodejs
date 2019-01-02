@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 // swaggerRouter configuration
 const options = {
   controllers: `${__dirname}/src/controllers`,
-  useStubs: process.env.NODE_ENV === 'development' // Conditionally turn on stubs (mock mode)
+  useStubs: process.env.NODE_ENV === 'development'
 };
 
 swaggerTools.initializeMiddleware(swaggerDoc, middleware => {
