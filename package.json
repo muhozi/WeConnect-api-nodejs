@@ -29,7 +29,8 @@
   "homepage": "https://github.com/muhozi/WeConnect-api-nodejs#readme",
   "dependencies": {
     "dotenv": "^6.2.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "swagger-tools": "^0.10.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
