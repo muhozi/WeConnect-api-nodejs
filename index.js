@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import swaggerTools from 'swagger-tools';
 import swaggerDoc from './docs/api.json';
 import app from './src';
+import models from './src/Models';
 
 const loadConfig = dotenv.config();
 
@@ -21,7 +22,9 @@ swaggerTools.initializeMiddleware(swaggerDoc, middleware => {
   app.use(middleware.swaggerValidator());
   app.use(middleware.swaggerRouter(options));
   app.use(middleware.swaggerUi());
-  app.listen(port, () => {
-    console.log(`App running on ${port}  🚀`);
+  models.sequelize.sync().then(() => {
+    app.listen(3000, () => {
+      console.log(`App running on ${port}  🚀`);
+    });
   });
 });
