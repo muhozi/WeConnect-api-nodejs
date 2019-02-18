@@ -1,16 +1,22 @@
 import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize('weconnect', 'emery', '', {
-  host: 'localhost',
-  dialect: 'postgres'
-});
+const db = new Sequelize(
+  process.env.DB_NAME || 'wedbect',
+  process.env.DB_USER || 'root',
+  process.env.DB_PASSWORD || '',
+  {
+    host: process.env.DB_HOST || 'localhost',
+    dialect: process.env.DB_TYPE || 'postgres',
+    logging: false
+  }
+);
 
 const models = {
-  User: sequelize.import('./User'),
-  Business: sequelize.import('./Business'),
-  Review: sequelize.import('./Review'),
-  PasswordReset: sequelize.import('./PasswordReset'),
-  Token: sequelize.import('./Token')
+  User: db.import('./User'),
+  Business: db.import('./Business'),
+  Review: db.import('./Review'),
+  PasswordReset: db.import('./PasswordReset'),
+  Token: db.import('./Token')
 };
 
 Object.keys(models).forEach(key => {
@@ -19,7 +25,7 @@ Object.keys(models).forEach(key => {
   }
 });
 
-models.sequelize = sequelize;
+models.db = db;
 models.Sequelize = Sequelize;
 
 export default models;
